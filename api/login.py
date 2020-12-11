@@ -11,15 +11,6 @@ client = pymongo.MongoClient(
     "mongodb+srv://root:sD2fX1CYY2LhAcY2@cluster0.fvp4p.mongodb.net/Main?retryWrites=true&w=majority")
 db = client['SampleDatabase']
 
-result = db.SampleCollection.find_one({'custID': 3})
-hashed_password = result['password']
-password = 'lxdZM1aPBbOg5GL'
-finalResult = bcrypt.checkpw(password.encode('utf8'), hashed_password)
-if finalResult == True:
-    return {'message': 'logged in'}
-else:
-    return {'message': 'failed'}
-
 
 @ login_api.route('/login', methods=['POST'])
 def login():
@@ -30,7 +21,7 @@ def login():
     if finalResult == True:
         return {'message': 'logged in'}
     else:
-        return {'message': 'failed'}
+        return {'message': 'login failed'}
 
     # payload1 = {'x-api-key': '4v1iqyh5th8eKfYO191bZ5IX3DW4SDWj1E0NmF4t'}
     # payload2 = {
