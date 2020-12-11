@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AccountBalance } from "./components/AccountBalance";
 import { TransactionHistory } from "./components/TransactionHistory";
 import { Navbar } from "./components/Navbar";
+import { Home } from "./components/Home";
 import Login from "./components/Login";
 import TransactionForm from "./components/transactionForm";
 
@@ -13,7 +14,7 @@ function App() {
 				<Navbar />
 				<Switch>
 					<Route exact path="/">
-						<h1>Welcome To E-Wallet</h1>
+						<Home />
 					</Route>
 					<Route path="/accountBalance">
 						<AccountBalance />

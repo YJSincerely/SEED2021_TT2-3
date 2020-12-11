@@ -45,7 +45,7 @@ class Login extends Component {
 				this.setState({ userID: data.custID });
 				console.log(data);
 				this.props.history.push({
-					pathname: "/accountBalance",
+					pathname: "/",
 					state: { custID: data.custID, firstName: data.firstName },
 				});
 			});
@@ -68,6 +68,7 @@ class Login extends Component {
 							/>
 							<label>PASSWORD</label>
 							<input
+								type="password"
 								className="login-password"
 								onChange={(e) =>
 									this.handleChange(e, "password")
