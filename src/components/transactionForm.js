@@ -6,7 +6,7 @@ export default class TransactionForm extends React.Component {
 
 		this.state = {
 			transactionDetail: {
-				custID: 4, //take in from props
+				custID: 3, //take in from props
 				payeeID: "",
 				dateTime: "",
 				amount: "",
