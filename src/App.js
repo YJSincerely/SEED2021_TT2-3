@@ -4,6 +4,7 @@ import { AccountBalance } from "./components/AccountBalance";
 import { TransactionHistory } from "./components/TransactionHistory";
 import { Navbar } from "./components/Navbar";
 import Login from './components/Login';
+import TransactionForm from './components/transactionForm';
 
 function App() {
 	return (
@@ -19,6 +20,9 @@ function App() {
 					</Route>
                     <Route path="/transactionHistory">
 						<TransactionHistory />
+					</Route>
+                    <Route path="/transactionForm">
+						<TransactionForm />
 					</Route>
 				</Switch>
 			</Router>
