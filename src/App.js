@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AccountBalance } from "./components/AccountBalance";
+import { TransactionHistory } from "./components/TransactionHistory";
 
 function App() {
 	return (
@@ -13,6 +14,9 @@ function App() {
 					</Route>
 					<Route path="/accountBalance">
 						<AccountBalance />
+					</Route>
+                    <Route path="/transactionHistory">
+						<TransactionHistory />
 					</Route>
 				</Switch>
 			</Router>
