@@ -1,11 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AccountBalance } from "./components/AccountBalance";
 import { TransactionHistory } from "./components/TransactionHistory";
 import { Navbar } from "./components/Navbar";
-import Login from './components/Login';
-import TransactionForm from './components/transactionForm';
-
+import Login from "./components/Login";
+import TransactionForm from "./components/transactionForm";
 
 function App() {
 	return (
@@ -22,9 +21,9 @@ function App() {
 					<Route path="/transactionHistory">
 						<TransactionHistory />
 					</Route>
-                    <Route path="/transactionForm">
+					<Route path="/transactionForm">
 						<TransactionForm />
-                    </Route>
+					</Route>
 					<Route path="/loginPage">
 						<Login />
 					</Route>

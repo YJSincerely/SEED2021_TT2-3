@@ -46,7 +46,7 @@ class Login extends Component {
 				console.log(data);
 				this.props.history.push({
 					pathname: "/accountBalance",
-					state: { custID: data.custID },
+					state: { custID: data.custID, firstName: data.firstName },
 				});
 			});
 	}

@@ -13,7 +13,7 @@ export const AccountBalance = () => {
 		Object.keys(location.state).length === 0
 	) {
 		history.push("/loginPage");
-		console.log(location);
+		// console.log(location);
 	}
 
 	useEffect(() => {

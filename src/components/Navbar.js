@@ -6,6 +6,7 @@ export const Navbar = () => {
 	if (location.state === undefined) {
 		location.state = {};
 	}
+	console.log(location);
 	return (
 		<div id="nav">
 			<ul className="nav-links">
@@ -37,6 +38,17 @@ export const Navbar = () => {
 						}}
 					>
 						Transaction History
+					</Link>
+				</li>
+				<li className="nav-link">
+					<Link
+						className="navigation-link"
+						to={{
+							pathname: "/transactionForm",
+							state: { ...location.state },
+						}}
+					>
+						Transfer Money
 					</Link>
 				</li>
 				{/* <li className="nav-link">
@@ -71,7 +83,7 @@ export const Navbar = () => {
 								state: {},
 							}}
 						>
-							Logout
+							Logout {location.state.firstName}
 						</Link>
 					</li>
 				)}

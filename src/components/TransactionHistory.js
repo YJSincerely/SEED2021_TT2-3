@@ -11,7 +11,7 @@ export const TransactionHistory = () => {
 		Object.keys(location.state).length === 0
 	) {
 		history.push("/loginPage");
-		console.log(location);
+		// console.log(location);
 	}
 
 	useEffect(() => {
@@ -31,7 +31,7 @@ export const TransactionHistory = () => {
 			});
 	}, []);
 	return (
-		<div>
+		<div style={{ margin: "0 auto" }}>
 			<table>
 				<tr>
 					<th>No.</th>
