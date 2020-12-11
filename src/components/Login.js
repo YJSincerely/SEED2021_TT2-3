@@ -13,7 +13,7 @@ class Login extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.api = 'https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020'
+
   }
 
   handleChange(event, stateName){
@@ -31,7 +31,7 @@ class Login extends Component {
   };
 
   handleSubmit(event){
-    fetch(this.api+"/login", {
+    fetch("/login", {
 			method: "POST",
 			headers: {
 				"x-api-key": "4v1iqyh5th8eKfYO191bZ5IX3DW4SDWj1E0NmF4t",
