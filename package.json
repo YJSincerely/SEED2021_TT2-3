@@ -18,6 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020",
   "eslintConfig": {
     "extends": [
       "react-app",
