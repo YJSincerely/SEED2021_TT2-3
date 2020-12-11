@@ -3,14 +3,15 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
 	const location = useLocation();
-	const history = useHistory();
-
+	if (location.state === undefined) {
+		location.state = {};
+	}
 	return (
 		<div id="nav">
 			<ul className="nav-links">
 				<li className="nav-link">
 					<Link
-						className="navigation-link"
+						className="navigation-lisnk"
 						to={{ pathname: "/", state: { ...location.state } }}
 					>
 						Landing
@@ -31,17 +32,6 @@ export const Navbar = () => {
 					<Link
 						className="navigation-link"
 						to={{
-							pathname: "/loginPage",
-							state: { ...location.state },
-						}}
-					>
-						Log In
-					</Link>
-				</li>
-				<li className="nav-link">
-					<Link
-						className="navigation-link"
-						to={{
 							pathname: "/transactionHistory",
 							state: { ...location.state },
 						}}
@@ -49,6 +39,42 @@ export const Navbar = () => {
 						Transaction History
 					</Link>
 				</li>
+				{/* <li className="nav-link">
+					<Link
+						className="navigation-link"
+						to={{
+							pathname: "/loginPage",
+							state: { ...location.state },
+						}}
+					>
+						Log In
+					</Link>
+				</li> */}
+				{Object.keys(location.state).length === 0 ? (
+					<li className="nav-link">
+						<Link
+							className="navigation-link"
+							to={{
+								pathname: "/loginPage",
+								state: { ...location.state },
+							}}
+						>
+							Log In
+						</Link>
+					</li>
+				) : (
+					<li className="nav-link">
+						<Link
+							className="navigation-link"
+							to={{
+								pathname: "/",
+								state: {},
+							}}
+						>
+							Logout
+						</Link>
+					</li>
+				)}
 			</ul>
 		</div>
 	);
