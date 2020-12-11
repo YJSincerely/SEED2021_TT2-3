@@ -21,7 +21,7 @@ export const TransactionHistory = () => {
 				"x-api-key": "4v1iqyh5th8eKfYO191bZ5IX3DW4SDWj1E0NmF4t",
 			},
 			body: JSON.stringify({
-				custID: 3,
+				custID: location.state.custID,
 			}),
 		})
 			.then((response) => response.json())
