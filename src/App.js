@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar";
 import Login from './components/Login';
 import TransactionForm from './components/transactionForm';
 
+
 function App() {
 	return (
 		<div className="App">
@@ -13,16 +14,19 @@ function App() {
 				<Navbar />
 				<Switch>
 					<Route exact path="/">
-						<Login />
+						<h1>Welcome To E-Wallet</h1>
 					</Route>
 					<Route path="/accountBalance">
 						<AccountBalance />
 					</Route>
-                    <Route path="/transactionHistory">
+					<Route path="/transactionHistory">
 						<TransactionHistory />
 					</Route>
                     <Route path="/transactionForm">
 						<TransactionForm />
+                    </Route>
+					<Route path="/loginPage">
+						<Login />
 					</Route>
 				</Switch>
 			</Router>
